@@ -14,18 +14,13 @@ vector<string> gss(string s){
         baseans.push_back("");
         return baseans;
     }
-    
+    char ch = s[0];
     vector<string>smallans = gss(s.substr(1));
-    
     vector<string>ans;
     for(int i=0;i<smallans.size();i++){
 
-        ans.push_back(smallans[i]+"");
-    }
-    for(int i=0;i<smallans.size();i++){
-        string st = s[0]+smallans[i];
-       
-        ans.push_back(st);
+        ans.push_back("" + smallans[i]);
+        ans.push_back(ch+smallans[i]);
     }
     return ans;
     
